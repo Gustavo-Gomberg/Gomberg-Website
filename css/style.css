@@ -43,11 +43,11 @@ html {
 }
 
 /* Configura a Imagem da Logo */
-.logo-img {
+/* .logo-img {
     transform: scale(0.10);
     position: inherit;
     left: 125px;
-}
+} */
 
 /* Configura o Cabeçario */
 header {
@@ -63,8 +63,18 @@ header {
     background-color: var(--bg-color-03);
 }
 
+.nav-responsive {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--bg-color-03);
+}
+
 /* Configura o Menu de Navegação */
-.navigation a {
+.navigation a, .nav-responsive a {
     font-size: 1.2rem;
     color: var(--text-color);
     padding: 0.5rem 1rem;
@@ -160,6 +170,150 @@ section {
     cursor: pointer;
 }
 
+/* Configura o Menu-Hamburguer */
+.menu-hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: 0.3rem;
+    background-color: var(--text-color);
+    margin: 0.4rem 0;
+    transition: 0.3s ease;
+}
+
+.change .bar1 {
+    transform: translate(0, 0.65rem) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -0.65rem) rotate(45deg);
+}
+
+@media (min-width: 0px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .nav-responsive a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+    }
+    
+    section {
+        padding: 6rem 2.5rem;
+    }
+
+    .home, .about {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .home-img, .about-img {
+        width: 80%;
+        max-width: 80%;
+    }
+    
+    .home-content, .about-content {
+        width: 100%;
+    }
+
+    .home-content div {
+        text-align: center;
+    }
+
+    .home-content h1, .about-content h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.3rem;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .home-img, .about-img {
+        width: 65%;
+        max-width: 65%;
+    }
+
+    .services-box {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-hamburguer {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+    
+    .nav-responsive, .nav-responsive a {
+        display: none;
+    }
+
+    .home, .about {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .home-img, .about-img {
+        max-width: 35%;
+    }
+
+    .home-content, .about-content {
+        width: 50%;
+    }
+
+    .services-box {
+        width: 60%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .services-container {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    
+    .home-img, .about-img {
+        max-width: 25%;
+    }
+
+    .home-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.6rem;
+    }
+}
 
 .about {
     background-color: var(--bg-color-02);
