@@ -7,8 +7,8 @@
     --bg-color-02: #323946;
     --bg-color-03: #475775;
     --name-color: #3e46b3;
-    --advogado-color: #a2be00;
-    --description-color: #8a2626;
+    --advogado-color: #000000;
+    --description-color: #000000;
 }
 
 /* Redefine as Configurações Padrões do Navegador */
@@ -20,7 +20,7 @@
     border: none;
     outline: none;
     scroll-behavior: smooth;
-}
+}   
 
 /* Define a Cor de Fundo e a Cor Padrão de Texto */
 body {
@@ -28,9 +28,15 @@ body {
     color: var(--text-color);
 }
 
+.sedan-sc-regular {
+    font-family: "Sedan SC", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 /* Define a Fonte */
 html {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Sedan SC", serif;
     font-size: 16px;
 }
 
@@ -43,11 +49,11 @@ html {
 }
 
 /* Configura a Imagem da Logo */
-/* .logo-img {
+.logo-img {
     transform: scale(0.10);
     position: inherit;
-    left: 125px;
-} */
+    left: 150px;
+} 
 
 /* Configura o Cabeçario */
 header {
@@ -102,6 +108,9 @@ section {
 
 .home-content {
     width: 45%;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .home-content h1{
@@ -235,6 +244,7 @@ section {
     text-overflow: ellipsis;
 }
 
+/* Configura a Background Image */
 
 /* Configura o Rodapé */
 
@@ -278,6 +288,10 @@ footer {
 @media (min-width: 0px) {
     .menu-hamburguer {
         display: block;
+    }
+
+    .logo-img {
+        display: none;
     }
 
     .navigation {
@@ -391,6 +405,10 @@ footer {
 
     .home-content h3 {
         font-size: 1.6rem;
+    }
+
+    .logo-img {
+        display: flex;
     }
 }
 
