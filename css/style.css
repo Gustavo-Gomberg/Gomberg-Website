@@ -1,14 +1,12 @@
 /* Facilita o uso de Cores */
 :root {
     --main-color: #00eeff;
-    --main-color2: #2c3f41;
     --text-color: #ffffff;
     --bg-color-01: #1f242d;
     --bg-color-02: #323946;
     --bg-color-03: #475775;
     --name-color: #3e46b3;
-    --advogado-color: #000000;
-    --description-color: #000000;
+    --service-color: #d9ff00;
 }
 
 /* Redefine as Configurações Padrões do Navegador */
@@ -66,7 +64,7 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: var(--bg-color-03);
+    background-color: black;
 }
 
 .nav-responsive {
@@ -89,7 +87,8 @@ header {
 
 /* Configura o Menu de Navegação */
 .navigation a:hover {
-    color: var(--main-color);
+    color: var(--service-color);
+    box-shadow: 0 0 0.5rem var(--service-color);
 }
 
 /* Configura as Sections (Paginas) */
@@ -121,14 +120,14 @@ section {
 
 .home-content h2 {
     font-size: 1.2rem;
-    color: var(--advogado-color);
+    color: black;
 }
 
 .home-content h3 {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 1.3;
-    color: var(--description-color);
+    color: black;
 }
 
 .home-content p {
@@ -145,17 +144,19 @@ section {
     width: 2.5rem;
     height: 2.5rem; 
     background: transparent;
-    border: solid 0.15rem var(--main-color);
+    border: solid 0.15rem black;
     border-radius: 50%;
     font-size: 2rem;
-    color: var(--main-color);
+    color: black;
     margin: 1.8rem 0.5rem;
     transition: 0.5s ease;
 }
 
 .social-media a:hover {
     transform: scale(1.2);  
-    box-shadow: 0 0 0.5rem var(--main-color);
+    box-shadow: 0 0 0.5rem var(--service-color);
+    border-color: var(--service-color);
+    color: var(--service-color);
 }
 
 /* Configura os Botões */
@@ -163,9 +164,9 @@ section {
 .btn {
     display: inline-block;
     padding: 0.7rem 1.8rem;
-    background: var(--main-color);
+    background: black;
     border-radius: 2rem;
-    color: var(--bg-color-02);
+    color: var(--service-color);
     font-weight: 600;
     letter-spacing: 0.1rem;
     transition: 0.3s ease;
@@ -173,20 +174,34 @@ section {
 }
 
 .btn:hover {
-    box-shadow: 0 0 0.3rem var(--main-color);
-    background-color: inherit;
-    color: var(--main-color);
+    box-shadow: 0 0 0.3rem var(--service-color);
+    color: var(--service-color);
     cursor: pointer;
 }
 
-.about {
-    background-color: var(--bg-color-02);
+/* Configura o About */
+.informations {
+    background-image: url(chicken-background.png);
+}
+
+/* Configura o Service-Span */
+span {
+    color: var(--service-color);
 }
 
 /* Configura as Paginas de Services, Contacts e Informations */
 .services h2,
 .contacts h2,
 .informations h2
+{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.services h1,
+.contacts h1,
+.informations h1
 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
@@ -205,8 +220,6 @@ section {
     padding: 2rem 1rem 2.5rem;
     border-radius: 1.2rem;
     text-align: center;
-    border: solid 0.15rem var(--bg-color-01);
-    background-color: var(--bg-color-02);
     transition: 0.5s ease;
 }
 
@@ -216,10 +229,10 @@ section {
     justify-content: space-between;
     min-height: 25rem;
     margin-bottom: 1rem;
+    background-image: url('service-background.jpg');
 }
 
 .services-container .services-box:hover {
-    border-color: var(--main-color);
     background-color: var(--bg-color-02);
     cursor: default;
     transform: scale(1.05);
@@ -242,6 +255,7 @@ section {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: left;
 }
 
 /* Configura a Background Image */
